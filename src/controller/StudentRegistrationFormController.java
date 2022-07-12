@@ -46,6 +46,7 @@ public class StudentRegistrationFormController {
         }else{
             new Alert(Alert.AlertType.WARNING,"Try Again").show();
         }
+        initialize();
 
     }
     boolean saveStudent(Student s) throws SQLException, ClassNotFoundException {
