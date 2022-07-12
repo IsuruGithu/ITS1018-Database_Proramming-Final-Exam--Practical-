@@ -17,41 +17,43 @@
             <Font name="DejaVu Serif Bold" size="29.0" />
          </font>
       </Label>
-      <JFXTextField layoutX="140.0" layoutY="96.0" prefHeight="26.0" prefWidth="177.0" AnchorPane.topAnchor="96.0" />
+      <JFXTextField fx:id="txtid" layoutX="140.0" layoutY="96.0" prefHeight="26.0" prefWidth="177.0" AnchorPane.topAnchor="96.0" />
       <Label layoutX="32.0" layoutY="101.0" text="Student-ID" AnchorPane.topAnchor="101.0" />
       <Label layoutX="29.0" layoutY="154.0" text="Student Name" />
       <Label layoutX="32.0" layoutY="219.0" text="E mail" />
       <Label layoutX="370.0" layoutY="219.0" text="Contact-no" />
       <Label layoutX="29.0" layoutY="284.0" text="Address" />
       <Label layoutX="32.0" layoutY="349.0" text="NIC" />
-      <JFXTextField layoutX="140.0" layoutY="149.0" prefHeight="26.0" prefWidth="584.0" />
-      <JFXTextField layoutX="141.0" layoutY="214.0" prefHeight="26.0" prefWidth="197.0" />
-      <JFXTextField layoutX="489.0" layoutY="214.0" prefHeight="26.0" prefWidth="232.0" />
-      <JFXTextField layoutX="140.0" layoutY="279.0" prefHeight="26.0" prefWidth="584.0" />
-      <JFXTextField layoutX="140.0" layoutY="344.0" prefHeight="26.0" prefWidth="232.0" />
-      <TableView layoutX="15.0" layoutY="469.0" prefHeight="161.0" prefWidth="733.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
+      <JFXTextField fx:id="txtName" layoutX="140.0" layoutY="149.0" prefHeight="26.0" prefWidth="584.0" />
+      <JFXTextField fx:id="txtEmail" layoutX="141.0" layoutY="214.0" prefHeight="26.0" prefWidth="197.0" />
+      <JFXTextField fx:id="txtContact" layoutX="489.0" layoutY="214.0" prefHeight="26.0" prefWidth="232.0" />
+      <JFXTextField fx:id="txtAddress" layoutX="140.0" layoutY="279.0" prefHeight="26.0" prefWidth="584.0" />
+      <JFXTextField fx:id="txtnic" layoutX="140.0" layoutY="344.0" prefHeight="26.0" prefWidth="232.0" />
+      <TableView fx:id="tblStudent" layoutX="15.0" layoutY="469.0" prefHeight="161.0" prefWidth="733.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="ID" />
-            <TableColumn prefWidth="109.0" text="Name" />
-            <TableColumn prefWidth="93.0" text="E mail" />
-            <TableColumn prefWidth="125.0" text="Contact" />
-            <TableColumn prefWidth="183.0" text="Address" />
-            <TableColumn prefWidth="146.0" text="NIC" />
+          <TableColumn fx:id="clmid" prefWidth="75.0" text="ID" />
+            <TableColumn fx:id="clmname" prefWidth="109.0" text="Name" />
+            <TableColumn fx:id="clmemail" prefWidth="93.0" text="E mail" />
+            <TableColumn fx:id="clmcontact" prefWidth="125.0" text="Contact" />
+            <TableColumn fx:id="clmaddress" prefWidth="183.0" text="Address" />
+            <TableColumn fx:id="clmnic" prefWidth="146.0" text="NIC" />
         </columns>
       </TableView>
       <Separator layoutX="272.0" layoutY="83.0" prefWidth="200.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="82.0" />
       <Separator layoutX="15.0" layoutY="452.0" prefWidth="200.0" AnchorPane.bottomAnchor="190.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
-      <JFXButton buttonType="RAISED" layoutX="401.0" layoutY="413.0" prefHeight="26.0" prefWidth="72.0" style="-fx-background-color: #ffff00;" text="SAVE">
+      <JFXButton buttonType="RAISED" layoutX="469.0" layoutY="413.0" onAction="#studentSaveOnAction" prefHeight="26.0" prefWidth="72.0" style="-fx-background-color: #ffff00;" text="SAVE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="563.0" layoutY="413.0" style="-fx-background-color: #ff0000;" text="DELETE">
+      <JFXButton buttonType="RAISED" layoutX="563.0" layoutY="413.0" onAction="#studentDeleteOnAction" style="-fx-background-color: #ff0000;" text="DELETE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="649.0" layoutY="413.0" style="-fx-background-color: #00ff00;" text="UPDATE">
+      <JFXButton buttonType="RAISED" layoutX="649.0" layoutY="413.0" onAction="#studentUpdateOnAction" style="-fx-background-color: #00ff00;" text="UPDATE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></JFXButton>
+      <JFXTextField layoutX="25.0" layoutY="413.0" onAction="#searchStudentOnAction" prefHeight="26.0" prefWidth="400.0" promptText="search" />
+      <JFXButton buttonType="RAISED" layoutX="375.0" layoutY="96.0" onAction="#btnclearOnAction" prefHeight="26.0" prefWidth="94.0" style="-fx-background-color: blue;" text="Clear" />
    </children>
 </AnchorPane>
