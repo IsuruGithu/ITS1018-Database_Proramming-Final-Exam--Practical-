@@ -53,7 +53,7 @@
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></JFXButton>
-      <JFXTextField layoutX="25.0" layoutY="413.0" onAction="#searchStudentOnAction" prefHeight="26.0" prefWidth="400.0" promptText="search" />
+      <JFXTextField fx:id="txtsearch" layoutX="25.0" layoutY="413.0" onAction="#searchStudentOnAction" prefHeight="26.0" prefWidth="400.0" promptText="search" />
       <JFXButton buttonType="RAISED" layoutX="375.0" layoutY="96.0" onAction="#btnclearOnAction" prefHeight="26.0" prefWidth="94.0" style="-fx-background-color: blue;" text="Clear" />
    </children>
 </AnchorPane>

@@ -35,6 +35,7 @@ public class StudentRegistrationFormController {
     public TableColumn clmcontact;
     public TableColumn clmaddress;
     public TableColumn clmnic;
+    public JFXTextField txtsearch;
 
     public void studentSaveOnAction(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {
         Student s1 = new Student(
@@ -79,9 +80,9 @@ public class StudentRegistrationFormController {
         }
     }
 
-    public void searchStudentOnAction(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {String customerId=txtid.getText();
-        String studentId=txtid.getText();
-        Student s1 = new StudentController().getStudent(customerId);
+    public void searchStudentOnAction(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {
+        String studentId=txtsearch.getText();
+        Student s1 = new StudentController().getStudent(studentId);
         if (s1==null){
 
         }else {
@@ -106,13 +107,13 @@ public class StudentRegistrationFormController {
             e.printStackTrace();
         }
     }
-    void setData(Student s1){
-        txtid.setText(s1.getId());
-        txtName.setText(s1.getName());
-        txtEmail.setText(s1.getEmail());
-        txtContact.setText(s1.getContact());
-        txtAddress.setText(s1.getAddress());
-        txtnic.setText(s1.getNic());
+    void setData(Student s){
+        txtid.setText(s.getId());
+        txtName.setText(s.getName());
+        txtEmail.setText(s.getEmail());
+        txtContact.setText(s.getContact());
+        txtAddress.setText(s.getAddress());
+        txtnic.setText(s.getNic());
     }
 
 
